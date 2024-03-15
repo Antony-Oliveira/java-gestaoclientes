@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="27.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de Registro de clientes">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar cliente">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Group layoutX="30.0" layoutY="208.0">
+         <children>
+            <Label onKeyTyped="#handleCpfTyped" style="-fx-font-weight: bold;" text="CPF" />
+            <TextField fx:id="cpf" layoutY="18.0" onKeyTyped="#handleCpfTyped" prefHeight="26.0" prefWidth="254.0" style="-fx-border-color: gray;" />
+         </children>
+      </Group>
+      <Group layoutX="28.0" layoutY="275.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Celular" />
+            <TextField fx:id="phone" layoutY="18.0" prefHeight="26.0" prefWidth="254.0" style="-fx-border-color: gray;" onKeyTyped="#handlePhoneTyped" />
+         </children>
+      </Group>
+      <Group layoutX="28.0" layoutY="150.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Nome" />
+            <TextField fx:id="name" layoutY="18.0" prefHeight="26.0" prefWidth="254.0" style="-fx-border-color: gray;" />
+         </children>
+      </Group>
+      <Group layoutX="28.0" layoutY="334.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="E-mail" />
+            <TextField fx:id="email" layoutY="18.0" prefHeight="26.0" prefWidth="254.0" style="-fx-border-color: gray;" />
+         </children>
+      </Group>
+      <Button layoutX="520.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="36.0" prefWidth="76.0" style="-fx-text-fill: #000; -fx-background-color: #ffcc24;" text="Limpar" textFill="#0d0101" />
+      <Button layoutX="629.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="36.0" prefWidth="76.0" style="-fx-text-fill: #fff; -fx-background-color: #287c6c;" text="Salvar" textFill="#0d0101" />
+      <Text fx:id="errorName" fill="#eb1b1b" layoutX="296.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="254.0" />
+      <Text fx:id="errorCpf" fill="#eb1b1b" layoutX="297.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="254.0" />
+      <Text fx:id="errorPhone" fill="#eb1b1b" layoutX="296.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="254.0" />
+      <Text fx:id="errorEmail" fill="#eb1b1b" layoutX="296.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="254.0" />
+   </children>
+</Pane>
